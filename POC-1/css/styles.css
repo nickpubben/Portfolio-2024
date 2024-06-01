@@ -8,19 +8,31 @@ html {
 }
 
 body {
+    font-family: "Roboto", sans-serif;
     background-color: var(--black-color);
     color: var(--white-color);
-    text-align: center;
     display: flex;
     height: 100%;
-    font-size: 18px;
+    padding-top: 100px;
 }
 
 .swipe-button {
-    border: 2px solid var(--white-color);
-    height: 10vh;
+    border-top: 3px solid var(--white-color);
+    height: 9vh;
     width: 15vw;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     margin: auto;
     box-sizing: border-box;
+}
+
+h1 {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+h2 {
+    font-size: 0.8em;
+    font-weight: 200;
 }
