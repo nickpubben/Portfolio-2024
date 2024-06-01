@@ -1,6 +1,8 @@
 :root {
     --black-color: #1A1A1A;
     --white-color: #F5F0E3;
+
+    --swipe-duration: 0.5s;
 }
 
 html {
@@ -16,7 +18,26 @@ body {
     padding-top: 100px;
 }
 
-.swipe-button {
+.top-bottom {
+    background: linear-gradient(0deg, var(--white-color) 50%, var(--black-color) 50%);
+    &:after {
+      background: linear-gradient(0deg, transparent 50%, var(--white-color) 50%);
+    }
+  }
+  
+  .top-bottom,
+  .top-bottom:after {
+    background-position-y: 100%;
+    padding: 0;
+  }
+  
+  .top-bottom:hover,
+  .top-bottom:hover:after {
+    background-position-y: 0;
+    padding: 0 20px;
+  }
+
+  .swipe-button {
     border-top: 3px solid var(--white-color);
     height: 9vh;
     width: 15vw;
@@ -25,8 +46,26 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: auto;
+    position: relative;
     box-sizing: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
 }
+
+  .swipe-button,
+  .swipe-button:after {
+    background-size: 200% 200%;
+    transition: all var(--swipe-duration) ease-in-out;
+  }
 
 h1 {
     font-size: 1.5em;
@@ -34,5 +73,5 @@ h1 {
 }
 h2 {
     font-size: 0.8em;
-    font-weight: 200;
+    font-weight: 300;
 }
