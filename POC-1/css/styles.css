@@ -1,0 +1,26 @@
+:root {
+    --black-color: #1A1A1A;
+    --white-color: #F5F0E3;
+}
+
+html {
+
+}
+
+body {
+    background-color: var(--black-color);
+    color: var(--white-color);
+    text-align: center;
+    display: flex;
+    height: 100%;
+    font-size: 18px;
+}
+
+.swipe-button {
+    border: 2px solid var(--white-color);
+    height: 10vh;
+    width: 15vw;
+    display: inline-block;
+    margin: auto;
+    box-sizing: border-box;
+}
