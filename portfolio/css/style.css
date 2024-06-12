@@ -1,11 +1,14 @@
 :root {
-  
+    --black-color: #1A1A1A;
+    --white-color: #F5F0E3;
 }
 
 html {
-
+    font-family: "Roboto", sans-serif;
+    background-color: var(--black-color);
+    color: var(--white-color);
 }
 
 body {
-  
+    
 }
